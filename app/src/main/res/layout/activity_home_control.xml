@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.orb.homeauto.HomeControl">
+
+    <TextView
+        android:id="@+id/txtHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:text="@string/app_hint"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHint"
+        android:layout_margin="4dp"
+        android:background="@android:color/holo_green_dark"
+        android:onClick="lightOn"
+        android:padding="2dp"
+        android:text="@string/l_on"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/btnOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHint"
+        android:layout_margin="4dp"
+        android:layout_toEndOf="@id/btnOn"
+        android:layout_toRightOf="@id/btnOn"
+        android:background="@android:color/holo_red_light"
+        android:onClick="lightOff"
+        android:padding="2dp"
+        android:text="@string/l_off"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/btndisconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHint"
+        android:layout_margin="4dp"
+        android:layout_toEndOf="@id/btnOff"
+        android:layout_toRightOf="@id/btnOff"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="btDisconnect"
+        android:padding="2dp"
+        android:text="@string/bt_disconnect"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHint"
+        android:layout_margin="4dp"
+        android:layout_toEndOf="@id/btnOff"
+        android:layout_toRightOf="@id/btnOff"
+        android:background="@android:color/holo_green_dark"
+        android:onClick="btnConnect"
+        android:padding="2dp"
+        android:text="@string/bt_connect"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <ScrollView
+        android:id="@+id/logScroll"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/btndisconnect"
+        android:foregroundGravity="center"
+        android:layout_margin="8dp">
+
+        <TextView
+
+            android:id="@+id/logTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:textColor="#FFB61E"
+            android:hint="@string/command_hint"
+            android:minLines="4" />
+
+
+    </ScrollView>
+
+    <EditText
+
+        android:id="@+id/customCmd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logScroll"
+       android:layout_marginTop="0dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorDarkBlue"
+        android:hint="@string/customcmdhint"
+        android:minLines="5"
+        android:focusable="false"
+        android:nestedScrollingEnabled="true"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="14sp" />
+
+    <ImageButton
+        android:id="@+id/btnCustomCmd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/customCmd"
+        android:layout_alignRight="@id/customCmd"
+        android:layout_below="@+id/customCmd"
+        android:layout_margin="4dp"
+        android:onClick="btnCustomCmd"
+        android:src="@drawable/ic_send" />
+
+    <Button
+        android:id="@+id/btnAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btmLayout"
+        android:layout_alignEnd="@id/btmLayout"
+        android:layout_alignRight="@id/btmLayout"
+        android:layout_margin="4dp"
+        android:background="@drawable/roundbtn"
+        android:onClick="btnabout"
+        android:text="@string/about"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:id="@+id/btmLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:contentDescription="@string/speakbtn"
+            android:id="@+id/btnspk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:onClick="btnSpeak"
+            android:src="@drawable/ic_action_voice" />
+
+        <TextView
+            android:id="@+id/homeAuto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

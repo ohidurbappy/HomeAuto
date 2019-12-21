@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.orb.homeauto.About">
+
+    <TextView
+        android:id="@+id/textView"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/aboutPage" />
+
+    <ImageButton
+        android:id="@+id/btnCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        android:onClick="makeCall"
+        android:padding="4dp"
+        android:src="@mipmap/ic_call" />
+
+    <ImageButton
+        android:id="@+id/gotoWeb"
+        android:padding="4dp"
+        android:background="@android:color/transparent"
+        android:layout_margin="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_toEndOf="@id/btnCall"
+        android:layout_toRightOf="@id/btnCall"
+        android:onClick="gotoWebPage"
+        android:src="@mipmap/ic_web" />
+</RelativeLayout>

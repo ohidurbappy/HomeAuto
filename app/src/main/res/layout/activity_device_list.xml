@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.orb.homeauto.DeviceList">
+
+    <ImageView
+        android:id="@+id/btpairedIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:contentDescription="@string/btsign"
+        android:src="@drawable/ic_bluetooth_paired" />
+
+    <TextView
+        android:id="@+id/btHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_toEndOf="@id/btpairedIcon"
+        android:layout_toRightOf="@id/btpairedIcon"
+        android:text="@string/device_list_hint"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:typeface="sans" />
+
+    <Button
+        android:id="@+id/btnShowPaired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btHint"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="4dp"
+        android:background="@color/colorPrimary"
+        android:padding="4dp"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="2"
+        android:shadowRadius="4"
+        android:text="@string/btn_list"
+        android:textColor="@android:color/white"
+        android:typeface="monospace" />
+
+    <ListView
+        android:id="@+id/pairedlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnShowPaired"
+        android:layout_margin="12dp"
+        android:divider="@color/colorAccent"
+        android:dividerHeight="1dp">
+
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/btenable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/enablebt"
+            android:onClick="btenable"
+            android:src="@drawable/ic_bt_enable" />
+
+        <Space
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0" />
+
+        <ImageButton
+            android:id="@+id/btdisable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/disablebt"
+            android:onClick="btdisable"
+            android:src="@drawable/ic_bt_disable" />
+    </LinearLayout>
+</RelativeLayout>

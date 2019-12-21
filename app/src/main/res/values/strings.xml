@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Home Auto</string>
+    <string name="device_list_hint">List of Available <b>Devices</b></string>
+    <string name="l_on">Light ON</string>
+    <string name="l_off">Light OFF</string>
+    <string name="bt_connect">Connect</string>
+    <string name="bt_disconnect">Disconnect</string>
+    <string name="app_hint">Control Home <b>Smartly</b></string>
+    <string name="btn_list">Show List</string>
+    <string name="command_hint">Commands sent to the device is shown here</string>
+    <string name="bt_not_supported">This Device does not support Bluetooth</string>
+    <string name="no_paired_device">No Paired Device</string>
+    <string name="aboutPage">This app is designed by <b>Ohidur Rahman Bappy</b>
+    \nA hobbyist programmer</string>
+    <string name="btsign">Bluetooth Sign</string>
+    <string name="about">About  App</string>
+    <string name="enablebt">Enable Bluetooth Device</string>
+    <string name="disablebt">Disable Bluetooth Device</string>
+    <string name="switchbton">Switch on Bluetooth</string>
+    <string name="confirmbton">Do you want to switch on Bluetooth?</string>
+    <string name="confirmbtontitle">Switch On Bluetooth</string>
+    <string name="btdisabled">Bluetooth is switched Off</string>
+    <string name="btalreadyon">Bluetooth is Already On</string>
+    <string name="customcmdhint">Enter Your Custom Commands</string>
+
+    <string name="btnotenabled">Bluetooth is not Switched On</string>
+    <string name="speakbtn">Speak Button</string>
+    <string name="voiceinputmsg">Give some command</string>
+    <string name="lighton">*DOUT01201#</string>
+    <string name="lightoff">*DOUT01200#</string>
+
+</resources>
